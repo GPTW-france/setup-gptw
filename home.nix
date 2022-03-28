@@ -12,8 +12,8 @@
   home = {
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
-    username = $USER;
-    homeDirectory = $HOME;
+    username = "xadet";
+    homeDirectory = "/home/xadet";
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage
@@ -30,7 +30,6 @@
     packages = with pkgs; [
           git
           virt-manager
-          vim
     ];
   };
 } 
