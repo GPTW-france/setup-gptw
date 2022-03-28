@@ -12,3 +12,19 @@ Copier le fichier `.qcow2` et céer une nouvelle VM en utilisant ce fichier
 
 Démarrer la machine et configurer son compte `.gptw.fr`
 
+# Utiliser gpg pour ssh
+
+Désactivier ssh-agent dans le fichier `/etc/X11/Xsession.options` remplacer `use-ssh-agent` par `no-use-ssh-agent`.
+
+Dans .gnupg/gpg-agent.conf 
+
+```
+enable-ssh-support
+```
+
+Dans bashrc
+
+```
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+```
