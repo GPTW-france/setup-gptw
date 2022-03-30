@@ -28,3 +28,11 @@ Dans bashrc
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 ```
+
+# Yubikey au login
+
+https://support.yubico.com/hc/en-us/articles/360016649099-Ubuntu-Linux-Login-Guide-U2F
+
+# Verouiller l'écran quand la yubikey est enlevée
+
+Copier le fichier `90-yubikey.rules` dans `/etc/udev/rules.d/`

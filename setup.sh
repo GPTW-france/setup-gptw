@@ -13,11 +13,13 @@ nix-shell '<home-manager>' -A install
 
 CONFIG_FILE=$HOME/.config/nixpkgs/home.nix
 
-cp home.nix $CONFIG_FILE
+cp *.nix $HOME/.config/nixpkgs/
 
 sed -i s@\$HOME@\"$HOME\"@g $CONFIG_FILE
 sed -i s@\$USER@\"$USER\"@g $CONFIG_FILE
 
 home-manager switch
 
-sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization libssl-dev swig libpcsclite-dev
+sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization libssl-dev swig libpcsclite-dev libpam-u2f docker.io
+
+sudo usermod -aG docker $USER
