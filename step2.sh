@@ -18,5 +18,25 @@ sed -i s@\$USER@\"$USER\"@g $CONFIG_FILE
 
 home-manager switch
 
+for i in $(seq 1 9)
+do
+    gsettings set org.gnome.shell.keybindings switch-to-application-${i} [];
+    gsettings set org.gnome.shell.extensions.dash-to-dock app-hotkey-${i} [];
+    gsettings set org.gnome.shell.extensions.dash-to-dock app-ctrl-hotkey-${i} [];
+    gsettings set org.gnome.shell.extensions.dash-to-dock app-shift-hotkey-${i} [];
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-${i} ["'<Super>${i}'"];
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-${i} ["'<Super><Shift>${i}'"];
+done
+
+gsettings set org.gnome.shell.keybindings switch-to-application-10 [];
+gsettings set org.gnome.shell.extensions.dash-to-dock app-hotkey-10 [];
+gsettings set org.gnome.shell.extensions.dash-to-dock app-ctrl-hotkey-10 [];
+gsettings set org.gnome.shell.extensions.dash-to-dock app-shift-hotkey-10 [];
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 ["'<Super>0'"];
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 ["'<Super><Shift>0'"];
+gsettings set org.gnome.mutter dynamic-workspaces false
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
+
+sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization libssl-dev swig libpcsclite-dev libpam-u2f docker.io
 
 sudo usermod -aG docker $USER
