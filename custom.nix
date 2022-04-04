@@ -7,7 +7,7 @@
     ./vim.nix
     ./bash.nix
     ./terminator.nix
-#    ./fish.nix
+    ./fish.nix
   ];
   home = {
 
@@ -20,6 +20,7 @@
       powerline-fonts
       fzf
       gnupg
+      autojump
     ];
   };
 }
