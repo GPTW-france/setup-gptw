@@ -4,7 +4,8 @@ Avoir Ubuntu d'installé sur le poste avec le disque chiffré
 
 # Setup de base
 
-Pour installer Nix et les utilitaires necessaires de base, copier ce repo et lancer setup.sh puis relancer un nouveau terminal
+Pour installer Nix et les utilitaires necessaires de base, copier ce repo et lancer step1.sh puis relancer un nouveau terminal.
+Enfin lancer step2.sh
 
 # Machine Virtuelle
 
