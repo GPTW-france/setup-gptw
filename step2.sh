@@ -37,6 +37,4 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 ["'<Super><S
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 
-sudo apt -y install wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization libssl-dev swig libpcsclite-dev libpam-u2f docker.io
-
 sudo usermod -aG docker $USER
