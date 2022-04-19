@@ -20,3 +20,6 @@ home-manager switch
 
 
 sudo usermod -aG docker $USER
+
+sudo ufw enable
+
