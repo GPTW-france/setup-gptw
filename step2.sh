@@ -36,5 +36,9 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 ["'<Super>
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 ["'<Super><Shift>0'"];
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
 
 sudo usermod -aG docker $USER
